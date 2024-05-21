@@ -1,3 +1,23 @@
+local function API_Check()
+    if Drawing == nil then
+        return "No"
+    else
+        return "Yes"
+    end
+end
+
+local Find_Required = API_Check()
+
+if Find_Required == "No" then
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+        Title = "Info";
+        Text = "Exploit is unsupported. Too run Tracer ESP";
+        Duration = math.huge;
+        Button1 = "OK"
+    })
+
+    return
+end
 
 
 local RunService = game:GetService("RunService")
